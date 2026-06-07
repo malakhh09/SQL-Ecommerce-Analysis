@@ -51,26 +51,30 @@ The project is built using a relational database with the following tables:
 ## Sample Queries
 
 ### 🔹Top 3 Products by Revenue   
+```sql
 SELECT p.product_name, SUM(oi.quantity * oi.price) AS revenue
 FROM products p
 JOIN order_items oi ON p.product_id = oi.product_id
 GROUP BY p.product_name
 ORDER BY revenue DESC
 FETCH FIRST 3 ROWS ONLY;
-
+```
 ### 🔹City with highest spending
+```sql
 SELECT c.city, SUM(oi.quantity * oi.price) AS total_spent
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 JOIN order_items oi ON o.order_id = oi.order_id
 GROUP BY c.city
 ORDER BY total_spent DESC;
-
+```
 ### 🔹Repeat Customer Identification 
+```sql
 SELECT customer_id, COUNT(order_id) AS total_orders
 FROM orders
 GROUP BY customer_id
 HAVING COUNT(order_id) > 1;
+```
 
 ---
 
@@ -101,6 +105,4 @@ HAVING COUNT(order_id) > 1;
 ## Conclusion
 This project demonstrates how SQL can be used to analyze structured data and generate business insights. It highlights the use of joins, aggregations, and conditional logic to solve real-world problems.
 
-```sql
-SELECT SUM(quantity * price) AS total_revenue
-FROM order_items;
+
