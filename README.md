@@ -76,10 +76,15 @@ HAVING COUNT(order_id) > 1;
 
 ## Project Output
 🔹Top 3 Products by Revenue  
+
 <img width="854" height="171" alt="image" src="https://github.com/user-attachments/assets/a0662932-6f00-4bb8-abeb-4239d84e2d1e" />
+
 🔹City with highest spending
+
 <img width="746" height="332" alt="image" src="https://github.com/user-attachments/assets/893458d9-f5d7-4636-8b5a-15f6944bb8e7" />
+
 🔹Repeat Customer Identification 
+
 <img width="772" height="83" alt="image" src="https://github.com/user-attachments/assets/38702a99-7e6a-425b-9600-39878576e5f7" /> 
 
 ---
